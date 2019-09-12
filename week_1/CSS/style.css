@@ -1,0 +1,31 @@
+
+
+.container {
+    width:60%;
+    height:auto;
+    /* background-color:burlywood; */
+    margin-left:10%;
+}
+
+.boxes {
+    width:calc(100%/3);
+    height:15vw;
+    /* background-color:black; */
+    float: left;
+}
+
+.MSG{
+ font-size:1rem;
+}
+
+#box1 {
+    background-color:darkcyan
+}
+
+#box2 {
+    background-color:darkgreen;
+}
+
+#box3 {
+    background-color:darkgoldenrod
+}

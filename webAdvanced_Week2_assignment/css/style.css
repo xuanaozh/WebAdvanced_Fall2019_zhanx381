@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Universal Selector Reset cssreset.com */
+* { margin: 0; padding: 0; }
+/* End Reset */
+@media screen and (min-width: 1024px) {
+
+}
+
+::-webkit-scrollbar {
+	width: 0px;  /* remove scrollbar space */
+	background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+body {
+	overflow-x:hidden;
+    width:100vw;
+    height:100%;
+    background-color:black;
+}	
+
+
+#question {
+    
+    margin:auto;
+    width:55vw;
+    height:auto;
+    text-align: center;
+    opacity: 0;
+
+}
+
+.answerBox  {
+
+    width:55vw;
+    margin:auto;
+    margin-top:10vh;
+    text-align: center;
+    opacity: 0;
+
+
+}
+
+h1 {
+    color:white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:5rem;
+    
+
+}
+
+
+h2 {
+    color:red;
+    font-size:3rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
