@@ -8,8 +8,7 @@
     <link href="CSS/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type='text/javascript' src='../js/handlebars.js'></script>
-    <script src="../js/script.js"></script>
+    <script type='text/javascript' src='../js/handlebars-v4.3.1.js'></script>
     <title>Beefpedia</title>
 </head>
 
@@ -31,19 +30,46 @@
 
         </div>
 
-        <div id="hoverDiv">
+        <div class="hoverDiv">
+            <!-- JSon Version here -->
+            <script id="hoverDiv-template" type="x-handlebars-template">
+
+                 {{#each data}}
+                 {{#each parts-info}}
+                 <div class="hoverDivX">
+            
+                        <h3>{{title}}</h3>
+                        <h4>{{content.method}}</h4>
+                 </div>
+                 
+                             {{/each}}
+    
+                 {{/each}}
+            
+            
+            
+            
+            
+            
+            </script>
+
+
+
+
+
+
 
             <!-- Rib Steak Start -->
-            <div id="hoverDiv1">
+            <!-- <div class="hoverDiv1">
 
                 <h3>Rib Steak</h3>
                 <h4>Stew/Oven/BBQ</h4>
 
-            </div>
+            </div> -->
             <!-- Rib Steak End -->
 
             <!-- Chuck Steak Start -->
-            <div id="hoverDiv2">
+            <!-- <div id="hoverDiv2">
 
                 <h3>Chuck Steak</h3>
                 <h4>Stew/Slow Roast</h4>
@@ -52,104 +78,104 @@
             <!-- Chuck Steak End -->
 
             <!-- Rump Steak Start -->
-            <div id="hoverDiv3">
+            <!-- <div id="hoverDiv3">
 
                 <h3>Rump Steak</h3>
                 <h4>Pan Fried</h4>
 
-            </div>
+            </div> -->
             <!-- Rump Steak End -->
 
             <!-- Sirloin Steak Start -->
-
+<!-- 
             <div id="hoverDiv4">
 
                 <h3>Sirloin Steak</h3>
                 <h4>Pan Fried/Sous-Vide</h4>
 
-            </div>
+            </div> -->
             <!-- Sirloin Steak End -->
 
             <!-- Topside Steak Start -->
-
+<!-- 
             <div id="hoverDiv5">
 
                 <h3>Topside Steak</h3>
                 <h4>Slow Roast</h4>
 
-            </div>
+            </div> -->
             <!-- Topside Steak End -->
 
             <!-- Silverside Steak Start -->
-            <div id="hoverDiv6">
+            <!-- <div id="hoverDiv6">
 
                 <h3>Silverside Steak</h3>
                 <h4>Roast/Sous-Vide</h4>
 
-            </div>
+            </div> -->
 
             <!-- Silverside Steak End -->
 
             <!-- Leg Start -->
-            <div id="hoverDiv7">
+            <!-- <div id="hoverDiv7">
 
                 <h3>Leg</h3>
                 <h4>Stew/Slow Roast</h4>
 
-            </div>
+            </div> -->
 
             <!-- Leg End -->
 
             <!-- Knuckle Steak Start -->
 
-            <div id="hoverDiv8">
+            <!-- <div id="hoverDiv8">
 
                 <h3>Knuckle Steak</h3>
                 <h4>Stew/Seared</h4>
 
-            </div>
+            </div> -->
 
             <!-- Knuckle Steak End -->
 
               <!-- flank Steak Start -->
 
-            
+<!--             
               <div id="hoverDiv9">
 
                 <h3>Flank Steak</h3>
                 <h4>Roast/Stir-Fried</h4>
 
-            </div>
+            </div> -->
               <!-- flank Steak End -->
 
                <!-- brisket Steak Start -->
-
+<!-- 
                <div id="hoverDiv10">
 
                 <h3>Brisket Steak</h3>
                 <h4>Slow Smoking/Stew</h4>
 
-            </div>
+            </div> -->
               <!-- brisket Steak End -->
 
                <!-- clod Steak Start -->
 
-               <div id="hoverDiv11">
+               <!-- <div id="hoverDiv11">
 
                 <h3>Clod Steak</h3>
                 <h4>Brasied</h4>
 
-            </div>
+            </div> -->
               <!-- clod Steak End -->
 
                  <!-- shank Start -->
-
+<!-- 
                  <div id="hoverDiv12">
 
                     <h3>Shank</h3>
                     <h4>Stew/Slow Roast</h4>
     
-                </div>
+                </div> -->
               <!-- shank  End -->
 
 
@@ -303,5 +329,6 @@
 
 </body>
 
+<script src="../js/script.js"></script>
 
 </html>
