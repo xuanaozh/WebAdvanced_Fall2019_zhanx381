@@ -1,0 +1,44 @@
+.smallDiv {
+    width:calc(90%/12);
+    height:80%;
+    border: 2px solid #ab3f3f;
+    border-radius: 5px;
+    margin-top:0.7vh;
+    margin-right:0.4vw;
+    float: left;
+    overflow-wrap: break-word;
+    opacity: 0.7;
+    display:table;
+    align-content: center;
+}
+
+.smallDiv:hover{
+    background:#d1baa5;
+    transition: ease-in-out 0.2s;
+    border: 2px solid #d1baa5;
+    border-radius: 5px;
+}
+.smallDiv:hover h2{
+   color:#ab3f3f;
+   transition: ease-in-out 0.2s;
+}
+
+.smallDiv h2{
+    font-family: 'Montserrat', sans-serif;
+    color:#d1baa5 ;
+    font-size:1rem !important;
+    font-weight:600;
+    text-align: center;
+    margin-top:2vh;
+    line-height: 150%;
+}
+
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color:#ab3f3f ;
+    font-size:0.79rem !important;
+    font-weight:600;
+    text-align: center;
+    line-height: 150%;
+}

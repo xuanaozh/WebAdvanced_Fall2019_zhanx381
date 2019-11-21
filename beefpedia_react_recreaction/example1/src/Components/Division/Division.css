@@ -1,0 +1,29 @@
+.largeDiv {
+    width: 98%;
+    height:auto;
+    /* border: 2px solid #ab3f3f;
+    border-radius: 5px; */
+    margin-bottom: 1vh;
+
+}
+
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    color:#d1baa5;
+    font-size:1rem !important;
+    font-weight:600;
+    text-align:left;
+    line-height: 150%;
+    margin-left:10px;
+}
+
+h5{
+    font-family: 'Montserrat', sans-serif;
+    color:#ab3f3f ;
+    font-size:0.79rem !important;
+    font-weight:600;
+    text-align:left;
+    line-height: 150%;
+    margin-left:10px;
+}
