@@ -3,12 +3,80 @@ import { ReactComponent as Logo } from './beef_cuts.svg';
 import './App.css';
 import Header from './Components/Header/Header';
 import Division from './Components/Division/Division';
+import $ from "jquery";
 
 
 
 class App extends Component {
 
-  
+    componentDidMount() {
+        //scroll effect
+      
+        $("#10.smallDiv").click(function (){
+            $(".largeInfoContainer").animate({
+              scrollTop: $("#l10.largeDiv").offset().top - 50+'%'
+            }, 1000)
+          })
+        
+            $("#11.smallDiv").click(function (){
+              $(".largeInfoContainer").animate({
+                scrollTop: $("#l11.largeDiv").offset().top
+              }, 1000)
+            })
+ 
+
+        //verision 1 it works
+        //trigger rib
+          $("#rib").mouseover(function(){
+            $("#0.smallDiv").addClass("show");
+            $("#l0.largeDiv").addClass("borderR");
+        })
+
+        $( "#0.smallDiv" ).mouseover(function() {
+            $("#rib").css("opacity","1");
+           $("#rib").addClass("smallShow");
+           $("#l0.largeDiv").addClass("borderW");
+          });
+
+
+        //not-trigger rib
+        $("#rib").mouseout(function(){
+        $("#0.smallDiv").removeClass("show");
+        $("#l0.largeDiv").removeClass("borderR");
+        $("#rib").css("opacity","0");
+        });
+        $( "#0.smallDiv" ).mouseout(function() {
+            $("#rib").css("opacity","0");
+           $("#rib").removeClass("smallShow");
+           $("#l0.largeDiv").removeClass("borderW");
+          });
+
+          //trigger chuck
+          $("#chuck").mouseover(function(){
+            $("#1.smallDiv").addClass("show");
+            $("#l1.largeDiv").addClass("borderR");
+        })
+
+        $( "#1.smallDiv" ).mouseover(function() {
+            $("#chuck").css("opacity","1");
+           $("#chuck").addClass("smallShow");
+           $("#l1.largeDiv").addClass("borderW");
+          });
+
+          //not-trigger chuck
+          $("#chuck").mouseout(function(){
+            $("#1.smallDiv").removeClass("show");
+            $("#l1.largeDiv").removeClass("borderR");
+            });
+            $( "#1.smallDiv" ).mouseout(function() {
+                $("#chuck").css("opacity","0");
+               $("#chuck").removeClass("smallShow");
+               $("#l1.largeDiv").removeClass("borderW");
+              });
+
+
+
+      }
 
 state = {
   "partsinfo":
@@ -175,20 +243,22 @@ render(){
 
 <div id="leftSide">
 
+{/* id={this.state.partsinfo[0].id} */}
+<div className="smallDivContainer" >
 
-<div id="smallDivContainer" >
-<Header name={this.state.partsinfo[0].title} /> 
-<Header name={this.state.partsinfo[1].title} /> 
-<Header name={this.state.partsinfo[2].title} /> 
-<Header name={this.state.partsinfo[3].title} /> 
-<Header name={this.state.partsinfo[4].title} /> 
-<Header name={this.state.partsinfo[5].title} /> 
-<Header name={this.state.partsinfo[6].title} /> 
-<Header name={this.state.partsinfo[7].title} /> 
-<Header name={this.state.partsinfo[8].title} /> 
-<Header name={this.state.partsinfo[9].title} /> 
-<Header name={this.state.partsinfo[10].title}/> 
-<Header name={this.state.partsinfo[11].title}/> 
+
+<Header id="0" name={this.state.partsinfo[0].title}  href = "#l0"/> 
+<Header id="1" name={this.state.partsinfo[1].title} href = "#l1"/> 
+<Header id="2" name={this.state.partsinfo[2].title} href = "#l2"/> 
+<Header id="3" name={this.state.partsinfo[3].title} href = "#l3"/> 
+<Header id="4" name={this.state.partsinfo[4].title} href = "#l4"/> 
+<Header id="5" name={this.state.partsinfo[5].title} href = "#l5"/> 
+<Header id="6" name={this.state.partsinfo[6].title} href = "#l6"/> 
+<Header id="7" name={this.state.partsinfo[7].title} href = "#l7"/> 
+<Header id="8" name={this.state.partsinfo[8].title} href = "#l8"/> 
+<Header id="9" name={this.state.partsinfo[9].title} href = "#l9"/> 
+<Header id="10" name={this.state.partsinfo[10].title} href = "#l10"/> 
+<Header id="11" name={this.state.partsinfo[11].title} href = "#l11"/> 
 
 
 
@@ -208,56 +278,58 @@ fruit={this.state.partsinfo[11].method} */}
 </div>
 
 
-<div id="largeInfoContainer">
+<div className="largeInfoContainer">
 
     
-<Division  name={this.state.partsinfo[0].title} 
+<Division id="l0" name={this.state.partsinfo[0].title} 
           title={this.state.partsinfo[0].method} 
-          content={this.state.partsinfo[0].intro}/>
+          content={this.state.partsinfo[0].intro}
+          />
 
-<Division  name={this.state.partsinfo[1].title} 
+<Division id="l1" name={this.state.partsinfo[1].title} 
           title={this.state.partsinfo[1].method} 
           content={this.state.partsinfo[1].intro}/>
 
-<Division  name={this.state.partsinfo[2].title} 
+<Division id="l2" name={this.state.partsinfo[2].title} 
           title={this.state.partsinfo[2].method} 
           content={this.state.partsinfo[2].intro}/>
 
-<Division  name={this.state.partsinfo[3].title} 
+<Division id="l3"  name={this.state.partsinfo[3].title} 
           title={this.state.partsinfo[3].method} 
           content={this.state.partsinfo[3].intro}/>
 
-<Division  name={this.state.partsinfo[4].title} 
+<Division id="l4" name={this.state.partsinfo[4].title} 
           title={this.state.partsinfo[4].method} 
           content={this.state.partsinfo[4].intro}/>
 
-<Division  name={this.state.partsinfo[5].title} 
+<Division id="l5" name={this.state.partsinfo[5].title} 
           title={this.state.partsinfo[5].method} 
           content={this.state.partsinfo[5].intro}/>
 
-<Division  name={this.state.partsinfo[6].title} 
+<Division id="l6" name={this.state.partsinfo[6].title} 
           title={this.state.partsinfo[6].method} 
           content={this.state.partsinfo[6].intro}/>
 
-<Division  name={this.state.partsinfo[7].title} 
+<Division id="l7" name={this.state.partsinfo[7].title} 
           title={this.state.partsinfo[7].method} 
           content={this.state.partsinfo[7].intro}/>
 
-<Division  name={this.state.partsinfo[8].title} 
+<Division id="l8" name={this.state.partsinfo[8].title} 
           title={this.state.partsinfo[8].method} 
           content={this.state.partsinfo[8].intro}/>
 
-<Division  name={this.state.partsinfo[9].title} 
+<Division id="l9" name={this.state.partsinfo[9].title} 
           title={this.state.partsinfo[9].method} 
           content={this.state.partsinfo[9].intro}/>
 
-<Division  name={this.state.partsinfo[10].title} 
+<Division id="l10" name={this.state.partsinfo[10].title} 
           title={this.state.partsinfo[10].method} 
           content={this.state.partsinfo[10].intro}/>
 
-<Division  name={this.state.partsinfo[11].title} 
+<Division id="l11" name={this.state.partsinfo[11].title} 
           title={this.state.partsinfo[11].method} 
-          content={this.state.partsinfo[11].intro}/>
+          content={this.state.partsinfo[11].intro}
+          href="#l11"/>
 
 
 

@@ -7,7 +7,6 @@
     margin-right:0.4vw;
     float: left;
     overflow-wrap: break-word;
-    opacity: 0.7;
     display:table;
     align-content: center;
 }
@@ -17,10 +16,28 @@
     transition: ease-in-out 0.2s;
     border: 2px solid #d1baa5;
     border-radius: 5px;
+    opacity: 1;
 }
+
+.show{
+    background:#ab3f3f;
+    transition: ease-in-out 0.2s;
+    border: 2px solid #ab3f3f;
+    border-radius: 5px;
+    opacity: 1;
+}
+/* 
+.clear{
+    border: 2px solid #ab3f3f;
+    border-radius: 5px;
+    background-color: black;
+} */
+
+
 .smallDiv:hover h2{
    color:#ab3f3f;
    transition: ease-in-out 0.2s;
+   opacity: 1;
 }
 
 .smallDiv h2{

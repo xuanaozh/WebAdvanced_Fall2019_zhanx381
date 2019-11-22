@@ -27,3 +27,19 @@ h5{
     line-height: 150%;
     margin-left:10px;
 }
+
+.borderR{
+
+    transition: ease-in-out 0.2s;
+    border: 2px solid #ab3f3f;
+    border-radius: 5px;
+   
+}
+
+.borderW{
+
+    transition: ease-in-out 0.2s;
+    border: 2px solid #d1baa5;
+    border-radius: 5px;
+   
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import Division from '../Division/Division'
 
 // class Header extends Compnent {
     
@@ -15,7 +16,8 @@ import './Header.css';
 
 const Header = (props)=>{
   return(    
-  <div className="smallDiv" >
+  
+  <div id = {props.id} className="smallDiv" href = {props.href}>
 <h2>{props.name}</h2>
 <h3>{props.fruit}</h3>
   </div>);
