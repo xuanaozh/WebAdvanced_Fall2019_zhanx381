@@ -3,6 +3,7 @@ import { ReactComponent as Logo } from './beef_cuts.svg';
 import './App.css';
 import Header from './Components/Header/Header';
 import Division from './Components/Division/Division';
+import Modal from './Components/Modal/Modal';
 import $ from "jquery";
 
 
@@ -10,31 +11,48 @@ import $ from "jquery";
 class App extends Component {
 
     componentDidMount() {
-      //scroll effect
-      $("#0.smallDiv").mouseenter(function (){
+      //scroll effect temp2
+    //   $('a[href^="#"]').on('click', function(event) {
+    //     var target = $(this.getAttribute('href'));
+    //     if( target.length ) {
+    //         event.preventDefault();
+    //         $('.largeInfoContainer').stop().animate({
+    //             scrollTop: target.offset().top
+    //         }, 1000);
+    //     }
+    // });
+      //scroll effect  temp1
+      $("#0.smallDiv,#rib").mouseenter(function (){
         $(".largeInfoContainer").animate({
-          scrollTop: $("#l0.largeDiv").offset().top
+          scrollTop: $(".largeInfoContainer").offset().top -300
         }, 1000);
+        
 
       })
 
 
-      $("#4.smallDiv").mouseenter(function (){
+      $("#3.smallDiv,#sirloin").mouseenter(function (){
         $(".largeInfoContainer").animate({
-          scrollTop: $("#l4.largeDiv").offset().top
+          scrollTop: $(".largeInfoContainer").offset().top +200
         }, 1000);
        
       })
+
+      $("#5.smallDiv,#silverside").mouseenter(function (){
+        $(".largeInfoContainer").animate({
+          scrollTop: $(".largeInfoContainer").offset().top +300
+        }, 1000)
+      })
     
-        $("#7.smallDiv").mouseenter(function (){
+        $("#7.smallDiv,#knuckle").mouseenter(function (){
           $(".largeInfoContainer").animate({
-            scrollTop: $("#l11.largeDiv").offset().top
+            scrollTop: $(".largeInfoContainer").offset().top +800
           }, 1000)
         })
 
-        $("#11.smallDiv").mouseenter(function (){
+        $("#10.smallDiv,#clod").mouseenter(function (){
           $(".largeInfoContainer").animate({
-            scrollTop: $("#l11.largeDiv").offset().top
+            scrollTop: $(".largeInfoContainer").offset().top +1100
           }, 1000)
         })
 
@@ -460,6 +478,8 @@ class App extends Component {
       }
 
 state = {
+  show:false,
+
   "partsinfo":
         [
             {
@@ -598,8 +618,13 @@ state = {
             
         
         ]
-
  
+}
+showModal = ()=>{
+  this.setState({
+    // show:true
+    show:!this.state.show
+  });
 }
 
 
@@ -662,10 +687,13 @@ fruit={this.state.partsinfo[11].method} */}
 <div className="largeInfoContainer">
 
     
-<Division id="l0" name={this.state.partsinfo[0].title} 
+<Division id="l0" href="#l0"name={this.state.partsinfo[0].title} 
           title={this.state.partsinfo[0].method} 
           content={this.state.partsinfo[0].intro}
-          />
+          ></Division>
+           <h6 onClick={()=>{this.showModal();}}>Beef</h6>
+
+<Modal closeModal={this.showModal} show = {this.state.show}>This is dynamic</Modal>
 
 <Division id="l1" name={this.state.partsinfo[1].title} 
           title={this.state.partsinfo[1].method} 
@@ -703,7 +731,7 @@ fruit={this.state.partsinfo[11].method} */}
           title={this.state.partsinfo[9].method} 
           content={this.state.partsinfo[9].intro}/>
 
-<Division id="l10" name={this.state.partsinfo[10].title} 
+<Division id="l10" href="#l10" name={this.state.partsinfo[10].title} 
           title={this.state.partsinfo[10].method} 
           content={this.state.partsinfo[10].intro}/>
 

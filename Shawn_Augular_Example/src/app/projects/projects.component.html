@@ -1,0 +1,20 @@
+<div *ngFor="let project of data">
+    <div class="Projects" >
+        <h3>
+            {{ project.name }}
+        </h3>
+        <p (click) = 'showDialog1()'>{{project.description}}</p>
+        <app-popup id="description-modal" class="hhidden">
+            <div>  
+                  <h1>This is the pop up description.</h1>
+            </div>
+    </app-popup>
+    
+
+        <!-- <p *ngIf="project.description">
+            Description: {{ project.description }}
+        </p> -->
+    </div>
+
+   
+</div>
