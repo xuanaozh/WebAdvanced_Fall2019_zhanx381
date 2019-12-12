@@ -88,18 +88,48 @@
 
 }
 
+.largeDiv{
+  width: 98%;
+  height:auto;
+  /* border: 2px solid #ab3f3f;
+  border-radius: 5px; */
+  margin-top:2vh;
+  margin-bottom: 1vh;
+  position:relative; 
+}
+
+.size{
+  width:100px;
+  height:60px;
+  float:right;
+  margin-top:15px;
+  margin-right:15px;
+}
+
 #svgContainer {
 
   width:30%;
   height:65vh;
-  margin-left:7vw;
-  animation-name:spinningCow;
+  margin-left:8vw;
+  /* animation-name:spinning;
   animation-duration: 10s;
   animation-iteration-count: infinite;
-  transform-origin: left;
+  transform-origin: left; */
   z-index:12;
  
 }
+
+
+
+.shake:hover,
+.shake:focus {
+	animation-name: spinning;
+	animation-duration: 2s;
+	transform-origin:50% 50%;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
 
 
 
@@ -113,19 +143,20 @@
  }
 
  @keyframes spinning{
-  0% {transform: translateY(0px) ;}
-  25% {transform: translateY(40px) ;}
-  50% {transform:translateY(60px) ;}
-  75% {transform: translateY(40px);}
-  100%{transform:translateY(0px) ;}
+  0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
  
  }
 
-.btn{
-  background-color: tomato;
-  color:wheat;
-  font-size:2rem;
-}
 
 h1 {
   font-family: 'Alata', sans-serif;
@@ -146,9 +177,9 @@ span {
 .glow {
 
 
-  -webkit-animation: glow 3s ease-in-out infinite alternate;
-  -moz-animation: glow 3s ease-in-out infinite alternate;
-  animation: glow 3s ease-in-out infinite alternate;
+  -webkit-animation: glow 1.5s ease-in-out infinite alternate;
+  -moz-animation: glow 1.5s ease-in-out infinite alternate;
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
 
 
@@ -166,4 +197,130 @@ span {
 
 .smallShow{
   fill:#d1baa5;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media all and (max-width: 699px) {
+
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+ 
+  #container {
+
+    width:100vw;
+    height:100vh;
+    background-color:black;
+    overflow-x:hidden;
+    display: block;
+  }
+
+
+  #rightSide{
+    width:100%;
+    height:auto;
+
+  }
+  
+  #leftSide{
+    margin:auto;
+    width:90%;
+    height:85%;
+    display: block;
+  }
+
+  .largeInfoContainer{
+    margin-top:5vh;
+    width:100%;
+    height:auto;
+    z-index:10;
+    overflow-x: auto;
+
+  
+  }
+
+
+  h1 {
+    font-family: 'Alata', sans-serif;
+    font-size:2rem;
+    color:#ab3f3f;
+    text-align: center;
+    /* margin-left:10px;
+    margin-bottom:10px; */
+    margin-top:10px;
+    
+  }
+
+  .largeDiv h1{
+    text-align: left;
+  }
+  span {
+    color:white;
+    font-size:2rem;
+    text-decoration: line-through;
+   
+  }
+
+  .largeDiv h6 {
+    font-size:0.7rem;
+  }
+
+  br{
+    display: none;
+  }
+
+
+  #title {
+    width:90%;
+    height:30%;
+    border: 2px solid #ab3f3f;
+    border-radius: 20px;
+    margin:auto;
+    margin-top:5vh;
+    box-shadow:
+    inset 0 0 5px #d1baa5,
+    inset 2px 0 8px #ab3f3f,
+    inset -2px 0 8px rgba(255, 115, 0, 0.486),
+    inset 2px 0 14px #ab3f3f,
+    inset -2px 0 14px rgba(255, 115, 0, 0.486),
+    0 0 5px #d1baa5,
+    -5px 0 8px #ab3f3f,
+    5px 0 8px rgba(255, 115, 0, 0.486);
+  
+  }
+
+
+
+
+  .size{
+    width:50px;
+    height:30px;
+    float:right;
+    margin-top:5px;
+    margin-right:5px;
+  }
+
+
+  #svgContainer {
+    width:70%;
+    height:40vh;
+    margin-left:15vw;
+    /* animation-name:spinning;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transform-origin: left; */
+    z-index:12;
+  }
+  
 }

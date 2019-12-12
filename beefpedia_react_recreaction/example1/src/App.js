@@ -5,6 +5,26 @@ import Header from './Components/Header/Header';
 import Division from './Components/Division/Division';
 import Modal from './Components/Modal/Modal';
 import $ from "jquery";
+import backrib from '../src/backrib.png';
+import ribeye from '../src/ribeye.png';
+import chuckroast from '../src/chuckroast.png';
+import chuckblade from '../src/chuckblade.png';
+import toprump from '../src/toprump.png';
+import bottomrump from '../src/bottomrump.png';
+import toploin from '../src/toploin.png';
+import tbone from '../src/tbone.png';
+import toproast from '../src/toproast.png';
+import roundsteak from '../src/roundsteak.png';
+import tiproast from '../src/tiproast.png';
+import tipsteak from '../src/tipsteak.png';
+import leg from '../src/leg.png';
+import knuckle from '../src/knuckle.png';
+import flank from '../src/flank.png';
+import brisket from '../src/brisket.png';
+import halfbrisket from '../src/halfbrisket.png';
+import clod from '../src/clod.png';
+import shank from '../src/shank.png';
+
 
 
 
@@ -25,7 +45,23 @@ class App extends Component {
       $("#0.smallDiv,#rib").mouseenter(function (){
         $(".largeInfoContainer").animate({
           scrollTop: $(".largeInfoContainer").offset().top -300
-        }, 1000);
+        }, 1);
+        
+
+      })
+
+      $("#1.smallDiv,#chuck").mouseenter(function (){
+        $(".largeInfoContainer").animate({
+          scrollTop: $(".largeInfoContainer").offset().top -400
+        }, 1);
+        
+
+      })
+
+      $("#2.smallDiv,#rump").mouseenter(function (){
+        $(".largeInfoContainer").animate({
+          scrollTop: $(".largeInfoContainer").offset().top -600
+        }, 1);
         
 
       })
@@ -33,30 +69,52 @@ class App extends Component {
 
       $("#3.smallDiv,#sirloin").mouseenter(function (){
         $(".largeInfoContainer").animate({
-          scrollTop: $(".largeInfoContainer").offset().top +200
-        }, 1000);
+          scrollTop: $(".largeInfoContainer").offset().top +470
+        }, 1);
        
       })
 
       $("#5.smallDiv,#silverside").mouseenter(function (){
         $(".largeInfoContainer").animate({
-          scrollTop: $(".largeInfoContainer").offset().top +300
-        }, 1000)
+          scrollTop: $(".largeInfoContainer").offset().top +700
+        }, 1)
       })
+
+      $("#6.smallDiv,#leg").mouseenter(function (){
+        $(".largeInfoContainer").animate({
+          scrollTop: $(".largeInfoContainer").offset().top +900
+        }, 1)
+      })
+    
     
         $("#7.smallDiv,#knuckle").mouseenter(function (){
           $(".largeInfoContainer").animate({
-            scrollTop: $(".largeInfoContainer").offset().top +800
-          }, 1000)
+            scrollTop: $(".largeInfoContainer").offset().top +1200
+          }, 1)
+        })
+        $("#8.smallDiv,#flank").mouseenter(function (){
+          $(".largeInfoContainer").animate({
+            scrollTop: $(".largeInfoContainer").offset().top +1300
+          }, 1)
         })
 
         $("#10.smallDiv,#clod").mouseenter(function (){
           $(".largeInfoContainer").animate({
-            scrollTop: $(".largeInfoContainer").offset().top +1100
-          }, 1000)
+            scrollTop: $(".largeInfoContainer").offset().top +1600
+          }, 1)
+        })
+
+        $("#11.smallDiv,#shank").mouseenter(function (){
+          $(".largeInfoContainer").animate({
+            scrollTop: $(".largeInfoContainer").offset().top +1700
+          }, 1)
         })
 
 
+      //   $(".cls-3").mouseover(function(){
+      //     $(".cls-3").css("fill","tomato");
+     
+      // })
     //verision 1 it works
     //trigger rib
       $("#rib").mouseover(function(){
@@ -686,59 +744,169 @@ fruit={this.state.partsinfo[11].method} */}
 
 <div className="largeInfoContainer">
 
-    
-<Division id="l0" href="#l0"name={this.state.partsinfo[0].title} 
+
+<div className="largeDiv" id="l0" >
+<img src={backrib} className="size"/>
+<img src={ribeye} className="size"/>
+<Division href="#l0"name={this.state.partsinfo[0].title} 
+
           title={this.state.partsinfo[0].method} 
           content={this.state.partsinfo[0].intro}
-          ></Division>
-           <h6 onClick={()=>{this.showModal();}}>Beef</h6>
+          />
+         
+            <h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Back Alley Ribs with Matty Matheson </h6>
+     
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
 
-<Modal closeModal={this.showModal} show = {this.state.show}>This is dynamic</Modal>
+<div className="largeDiv" id="l1">
+<img src={chuckblade} className="size"/>
+<img src={chuckroast} className="size"/>
 
-<Division id="l1" name={this.state.partsinfo[1].title} 
+<Division href="#l1" name={this.state.partsinfo[1].title} 
           title={this.state.partsinfo[1].method} 
           content={this.state.partsinfo[1].intro}/>
+         
+            <h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Back Alley Ribs with Matty Matheson </h6>
+    
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
 
-<Division id="l2" name={this.state.partsinfo[2].title} 
+  
+<div className="largeDiv" id="l2">
+<img src={toprump} className="size"/>
+<img src={bottomrump} className="size"/>
+
+<Division href="#l2" name={this.state.partsinfo[2].title} 
           title={this.state.partsinfo[2].method} 
           content={this.state.partsinfo[2].intro}/>
+           <h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Roasted Beef Rump Cap with Analiese Gregory </h6>
 
-<Division id="l3"  name={this.state.partsinfo[3].title} 
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
+
+<div className="largeDiv" id="l3">
+<img src={toploin} className="size"/>
+<img src={tbone} className="size"/>
+
+
+<Division href="#l3"  name={this.state.partsinfo[3].title} 
           title={this.state.partsinfo[3].method} 
           content={this.state.partsinfo[3].intro}/>
 
-<Division id="l4" name={this.state.partsinfo[4].title} 
+<h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Roasted Beef Rump Cap with Analiese Gregory </h6>
+  
+
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
+
+<div className="largeDiv" id="l4">
+<img src={roundsteak} className="size"/>
+<img src={toproast} className="size"/>
+
+<Division href="#l4" name={this.state.partsinfo[4].title} 
           title={this.state.partsinfo[4].method} 
           content={this.state.partsinfo[4].intro}/>
 
-<Division id="l5" name={this.state.partsinfo[5].title} 
+<h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Roasted Beef Rump Cap with Analiese Gregory </h6>
+   
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
+
+
+<div className="largeDiv" id="l5">
+<img src={tiproast} className="size"/>
+<img src={tipsteak} className="size"/>
+
+
+<Division href="#l5" name={this.state.partsinfo[5].title} 
           title={this.state.partsinfo[5].method} 
           content={this.state.partsinfo[5].intro}/>
+          <h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Roasted Beef Rump Cap with Analiese Gregory </h6>
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
 
-<Division id="l6" name={this.state.partsinfo[6].title} 
+
+<div className="largeDiv" id="l6">
+<img src={leg} className="size"/>
+
+
+
+<Division href="#l6" name={this.state.partsinfo[6].title} 
           title={this.state.partsinfo[6].method} 
           content={this.state.partsinfo[6].intro}/>
+          <h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Roasted Beef Rump Cap with Analiese Gregory </h6>
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
 
-<Division id="l7" name={this.state.partsinfo[7].title} 
+
+
+<div className="largeDiv" id="l7">
+<img src={knuckle} className="size"/>
+
+
+
+<Division href="#l7" name={this.state.partsinfo[7].title} 
           title={this.state.partsinfo[7].method} 
           content={this.state.partsinfo[7].intro}/>
+          <h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Roasted Beef Rump Cap with Analiese Gregory </h6>
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
 
-<Division id="l8" name={this.state.partsinfo[8].title} 
+
+
+<div className="largeDiv" id="l8">
+<img src={flank} className="size"/>
+
+
+<Division href="#l8" name={this.state.partsinfo[8].title} 
           title={this.state.partsinfo[8].method} 
           content={this.state.partsinfo[8].intro}/>
+          <h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Roasted Beef Rump Cap with Analiese Gregory </h6>
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
 
-<Division id="l9" name={this.state.partsinfo[9].title} 
+
+<div className="largeDiv" id="l9">
+<img src={halfbrisket} className="size"/>
+<img src={brisket} className="size"/>
+
+
+<Division href="#l9" name={this.state.partsinfo[9].title} 
           title={this.state.partsinfo[9].method} 
           content={this.state.partsinfo[9].intro}/>
+          <h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Roasted Beef Rump Cap with Analiese Gregory </h6>
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
 
-<Division id="l10" href="#l10" name={this.state.partsinfo[10].title} 
+
+<div className="largeDiv" id="l10">
+<img src={clod} className="size"/>
+
+
+<Division href="#l10" name={this.state.partsinfo[10].title} 
           title={this.state.partsinfo[10].method} 
           content={this.state.partsinfo[10].intro}/>
+          <h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Roasted Beef Rump Cap with Analiese Gregory </h6>
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
 
-<Division id="l11" name={this.state.partsinfo[11].title} 
+
+<div className="largeDiv" id="l11">
+<img src={shank} className="size"/>
+
+
+
+<Division  name={this.state.partsinfo[11].title} 
           title={this.state.partsinfo[11].method} 
           content={this.state.partsinfo[11].intro}
           href="#l11"/>
+          <h6 onClick={()=>{this.showModal();}}>[How to] - How to Make Roasted Beef Rump Cap with Analiese Gregory </h6>
+</div>
+<Modal closeModal={this.showModal} show = {this.state.show}></Modal>
+
+
+
 
 
 
@@ -747,7 +915,11 @@ fruit={this.state.partsinfo[11].method} */}
 
 
 </div>
-<Logo id="svgContainer"/>
+
+
+<Logo className="shake"id="svgContainer"/>
+
+
 
 
 

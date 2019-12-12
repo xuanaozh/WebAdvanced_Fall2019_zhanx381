@@ -17,7 +17,7 @@ import Division from '../Division/Division'
 const Header = (props)=>{
   return(    
   
-  <div id = {props.id} className="smallDiv" href = {props.href}>
+  <div id = {props.id} className="smallDiv">
 <h2>{props.name}</h2>
 <h3>{props.fruit}</h3>
   </div>);

@@ -1,25 +1,56 @@
 .Modal{
     position:absolute;
     width:100vw;
-    height:100vh;
-    background-color:rgba(0, 0 , 0, 0.9);
+    height:auto;
+    background-color:rgba(0,0,0, 0.9);
     top:0;
     left:0;
     z-index:2;
+
 }
 
 .container{
-    background-color:wheat;
+    /* background-color:wheat; */
     width:60vw;
     margin-left:20vw;
-    height: 70vh;
+    height: auto;
     margin-top:15vh;
+    margin-bottom:5vh;
+
 }
 
+.container h1{
+    text-align: left;
+    margin-top:4vh;
+}
+
+.container span{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #ab3f3f;;
+    font-style: oblique;
+    font-size:1.3rem !important;
+    font-weight:900;
+    text-align:left;
+    line-height: 150%;
+}
+.videoHolder{
+    width:95%;
+    height:70vh;
+    margin:auto;
+}
 #close {
     position: absolute;
     right:10vw;
     top:15vh;
     cursor: pointer;
-    color:wheat;
+
+}
+
+
+@media all and (max-width: 699px) {
+
+ 
+
+
 }
